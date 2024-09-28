@@ -1,0 +1,421 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LinkedIn Clone</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" rel="stylesheet">
+</head>
+<!-- <body class="bg-gray-100"> -->
+<body >
+    <!-- <nav class="bg-white shadow-md fixed top-0 w-full z-10">
+        <div class="max-w-7xl mx-auto px-4">
+            <div class="flex justify-between items-center h-14 md:h-16">
+                <div class="flex items-center">
+                    <img src="https://gymsnearby.in/img/fitfusion.png" alt="LinkedIn" class="h-10 w-10 mr-2 object-contain bg-gray-300 rounded-full">
+                    <div class="relative hidden md:block">
+                        <input type="text" placeholder="Search" class="bg-gray-100 rounded-md py-2 px-4 w-64">
+                        <i class="fas fa-search absolute right-3 top-3 text-gray-400"></i>
+                    </div>
+                </div>
+                <div class="flex items-center space-x-4 md:space-x-6">
+                    <a href="#" class="text-gray-600 hover:text-black text-center">
+                        <i class="fas fa-home text-xl md:text-base"></i>
+                        <span class="text-xs hidden md:block">Home</span>
+                    </a>
+                    <a href="#" class="text-gray-600 hover:text-black text-center">
+                        <i class="fas fa-user-friends text-xl md:text-base"></i>
+                        <span class="text-xs hidden md:block">My Network</span>
+                    </a>
+                    <a href="#" class="text-gray-600 hover:text-black text-center">
+                        <i class="fas fa-briefcase text-xl md:text-base"></i>
+                        <span class="text-xs hidden md:block">Jobs</span>
+                    </a>
+                    <a href="#" class="text-gray-600 hover:text-black text-center">
+                        <i class="fas fa-comment-dots text-xl md:text-base"></i>
+                        <span class="text-xs hidden md:block">Messaging</span>
+                    </a>
+                    <a href="#" class="text-gray-600 hover:text-black text-center">
+                        <i class="fas fa-bell text-xl md:text-base"></i>
+                        <span class="text-xs hidden md:block">Notifications</span>
+                    </a>
+                    <a href="#" class="text-gray-600 hover:text-black text-center">
+                        <img src="/api/placeholder/24/24" alt="Profile" class="rounded-full w-6 h-6 md:w-5 md:h-5 mx-auto">
+                        <span class="text-xs hidden md:block">Me</span>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </nav> -->
+    <nav class="bg-white shadow-md fixed top-0 w-full z-10">
+        <div class="max-w-7xl mx-auto px-4">
+            <div class="flex justify-between items-center h-16">
+                <div class="flex items-center flex-grow">
+                    <!-- <div class="bg-gray-200 w-20 h-10 flex items-center justify-center mr-4"> -->
+                        <img src="https://gymsnearby.in/img/fitfusion.png" alt="LinkedIn" class="h-10 w-10 mr-2 object-contain bg-gray-300 rounded-full">
+                    <!-- </div> -->
+                    <div class="relative flex-grow max-w-2xl">
+                        <input type="text" placeholder="Search gyms, trainers, and more..." class="w-full bg-gray-100 rounded-full py-2 px-4 pl-10">
+                        <i class="fas fa-search absolute left-3 top-1/2 transform -translate-y-1/2 text-gray-400"></i>
+                    </div>
+                </div>
+                <div class="flex items-center space-x-6">
+                    <a href="#" class="text-gray-700 hover:text-black">
+                        Payments
+                    </a>
+                    <a href="#" class="text-gray-700 hover:text-black">
+                        Edit Account
+                    </a>
+                    <a href="#" class="text-gray-600 hover:text-black relative">
+                        <i class="fas fa-bell text-xl"></i>
+                        <span class="absolute top-0 right-0 bg-red-500 rounded-full w-2 h-2"></span>
+                    </a>
+                    <a href="#" class="text-gray-600 hover:text-black">
+                        <img src="https://media.licdn.com/dms/image/v2/D4D03AQHUE9HMhfqs2A/profile-displayphoto-shrink_100_100/profile-displayphoto-shrink_100_100/0/1673010355845?e=1732752000&v=beta&t=-JmQ0Oyj0A4fGUcneWHO0-YgBMy46SYGsRMFlEzf9WQ" alt="Profile" class="rounded-full w-8 h-8">
+                    </a>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <main class="max-w-7xl mx-auto mt-16 md:mt-20 px-4" >
+        <div class="grid grid-cols-1 md:grid-cols-12 gap-4">
+            <!-- Left Sidebar -->
+            <!-- <div class="md:col-span-3 order-1">
+                <div class="bg-white rounded-lg shadow-md overflow-hidden mb-4">
+                    <div class="relative">
+                        <img src="https://media.licdn.com/dms/image/v2/D5616AQGTBoawovMNpQ/profile-displaybackgroundimage-shrink_200_800/profile-displaybackgroundimage-shrink_200_800/0/1707051093967?e=1732752000&v=beta&t=dQxka2CA2IsxNpbL0Qub5oORxQzP3ft6X81EVIwZtls" alt="Cover" class="w-full h-24 object-cover">
+                        <img src="https://media.licdn.com/dms/image/v2/D4D03AQHUE9HMhfqs2A/profile-displayphoto-shrink_100_100/profile-displayphoto-shrink_100_100/0/1673010355845?e=1732752000&v=beta&t=-JmQ0Oyj0A4fGUcneWHO0-YgBMy46SYGsRMFlEzf9WQ" alt="Profile" class="absolute bottom-0 left-1/2 transform -translate-x-1/2 translate-y-1/2 rounded-full border-4 border-white w-20 h-20">
+                    </div>
+                    <div class="pt-12 pb-4 px-4 text-center">
+                        <h2 class="font-bold text-lg">Ashish Aman Dmello</h2>
+                        <p class="text-sm text-gray-500">REACT | EXPRESS | NODE | MONGODB | JAVASCRIPT | PYTHON | FULL STACK WEB DEVELOPER</p>
+                    </div>
+                    <div class="border-t border-gray-200 px-4 py-2">
+                        <p class="text-sm">Profile viewers <span class="font-bold text-blue-600">22</span></p>
+                        <p class="text-sm text-blue-600">View all analytics</p>
+                    </div>
+                    <div class="border-t border-gray-200 px-4 py-2">
+                        <p class="text-sm font-bold">Network smarter with Premium</p>
+                        <p class="text-sm text-blue-600">Try 1 month of Premium for ₹0</p>
+                    </div>
+                    <div class="border-t border-gray-200 px-4 py-2">
+                        <p class="text-sm"><i class="fas fa-bookmark mr-2"></i>Saved items</p>
+                    </div>
+                </div>
+            </div> -->
+
+            <!-- <div class="md:col-span-3 order-1">
+                <div class="bg-white rounded-lg shadow-md overflow-hidden mb-4">
+                    <div class="relative">
+                        <img src="https://gymsnearby.in/gym/controller/upload/1687936203_5123.jpg" alt="Cover" class="w-full h-32 object-cover">
+                        <div class="absolute -bottom-10 left-1/2 transform -translate-x-1/2 bg-teal-500 rounded-full w-20 h-20 flex items-center justify-center">
+                            <span class="text-white text-2xl font-bold">OOO</span>
+                        </div>
+                    </div>
+                    <div class="pt-12 px-4 pb-4">
+                        <h2 class="font-bold text-xl text-center mb-1">Health Centre Name</h2>
+                        <p class="text-sm text-gray-500 text-center mb-4">Calisthenics centre</p>
+                        <div class="space-y-2 mb-4">
+                            <div class="flex justify-between items-center">
+                                <span class="text-gray-600">Followers</span>
+                                <span class="text-indigo-600 font-semibold">12.2 k</span>
+                            </div>
+                            <div class="flex justify-between items-center">
+                                <span class="text-gray-600">Following</span>
+                                <span class="text-indigo-600 font-semibold">40</span>
+                            </div>
+                            <div class="flex justify-between items-center">
+                                <span class="text-gray-600">Total Members</span>
+                                <span class="text-indigo-600 font-semibold">100</span>
+                            </div>
+                            <div class="flex justify-between items-center">
+                                <span class="text-gray-600">Total Active Members</span>
+                                <span class="text-indigo-600 font-semibold">66</span>
+                            </div>
+                            <div class="flex justify-between items-center">
+                                <span class="text-gray-600">Staff</span>
+                                <span class="text-indigo-600 font-semibold">32</span>
+                            </div>
+                        </div>
+                        <div class="space-y-2">
+                            <button class="w-full bg-green-100 text-green-700 py-2 px-4 rounded-md text-sm font-medium flex items-center justify-center">
+                                <i class="fas fa-search mr-2"></i> Find Gyms
+                            </button>
+                            <button class="w-full bg-blue-100 text-blue-700 py-2 px-4 rounded-md text-sm font-medium flex items-center justify-center">
+                                <i class="fas fa-user-friends mr-2"></i> Find Trainers
+                            </button>
+                            <button class="w-full bg-purple-100 text-purple-700 py-2 px-4 rounded-md text-sm font-medium flex items-center justify-center">
+                                <i class="fas fa-edit mr-2"></i> Edit Profile
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div> -->
+            <div class="md:col-span-3 order-1">
+                <div class="bg-white rounded-lg shadow-md overflow-hidden mb-4">
+                    <div class="relative">
+                        <img src="https://gymsnearby.in/gym/controller/upload/1687936203_5123.jpg" alt="Cover" class="w-full h-32 object-cover">
+                        <div class="absolute -bottom-10 left-1/2 transform -translate-x-1/2 bg-teal-500 rounded-full w-20 h-20 flex items-center justify-center">
+                            <span class="text-white text-2xl font-bold">OOO</span>
+                        </div>
+                    </div>
+                    <div class="pt-12 px-4 pb-4">
+                        <h2 class="font-bold text-xl text-center mb-1">Health Centre Name</h2>
+                        <p class="text-sm text-gray-500 text-center mb-4">Calisthenics centre</p>
+                        <div class="space-y-2">
+                            <div class="flex justify-between items-center">
+                                <span class="text-gray-600">Followers</span>
+                                <span class="text-indigo-600 font-semibold">12.2 k</span>
+                            </div>
+                            <div class="flex justify-between items-center">
+                                <span class="text-gray-600">Following</span>
+                                <span class="text-indigo-600 font-semibold">40</span>
+                            </div>
+                            <div class="flex justify-between items-center">
+                                <span class="text-gray-600">Total Members</span>
+                                <span class="text-indigo-600 font-semibold">100</span>
+                            </div>
+                            <div class="flex justify-between items-center">
+                                <span class="text-gray-600">Total Active Members</span>
+                                <span class="text-indigo-600 font-semibold">66</span>
+                            </div>
+                            <div class="flex justify-between items-center">
+                                <span class="text-gray-600">Staff</span>
+                                <span class="text-indigo-600 font-semibold">32</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Buttons outside the main card -->
+                <div class="space-y-2 px-2">
+                    <button class="w-full bg-green-100 text-green-700 py-3 px-4 rounded-md text-sm font-medium flex items-center justify-center">
+                        <i class="fas fa-search mr-2"></i> Find Gyms
+                    </button>
+                    <button class="w-full bg-blue-100 text-blue-700 py-3 px-4 rounded-md text-sm font-medium flex items-center justify-center">
+                        <i class="fas fa-user-friends mr-2"></i> Find Trainers
+                    </button>
+                    <button class="w-full bg-purple-100 text-purple-700 py-3 px-4 rounded-md text-sm font-medium flex items-center justify-center">
+                        <i class="fas fa-edit mr-2"></i> Edit Profile
+                    </button>
+                </div>
+            </div>
+            <!-- Main Content -->
+            <div class="md:col-span-6 order-2">
+                <div class="bg-white rounded-lg shadow-md p-4 mb-4">
+                    <div class="flex items-center mb-4">
+                        <img src="https://media.licdn.com/dms/image/v2/D4D03AQHUE9HMhfqs2A/profile-displayphoto-shrink_100_100/profile-displayphoto-shrink_100_100/0/1673010355845?e=1732752000&v=beta&t=-JmQ0Oyj0A4fGUcneWHO0-YgBMy46SYGsRMFlEzf9WQ" alt="Profile" class="rounded-full mr-2 w-10 h-10">
+                        <!-- <input type="text" placeholder="Start a post, try writing with AI" class="bg-gray-100 rounded-full py-2 px-4 w-full"> -->
+                        <button class="bg-gray-100 hover:bg-gray-200 text-gray-700 font-semibold rounded-full py-2 px-4 w-full flex items-center justify-center transition duration-300 ease-in-out">
+                            <i class="fas fa-plus mr-2"></i>
+                            Create new post
+                        </button>
+                    </div>
+                    <div class="flex justify-between">
+                        <button class="flex items-center text-gray-600 text-sm">
+                            <i class="fas fa-image mr-2"></i>
+                            Media
+                        </button>
+                        <button class="flex items-center text-gray-600 text-sm">
+                            <i class="fas fa-briefcase mr-2"></i>
+                            Job
+                        </button>
+                        <button class="flex items-center text-gray-600 text-sm">
+                            <i class="fas fa-pen mr-2"></i>
+                            Write article
+                        </button>
+                    </div>
+                </div>
+
+                
+                <div class="bg-white rounded-lg shadow-md p-4 mb-4">
+                    <!-- Post header -->
+                    <div class="flex items-start mb-2">
+                        <img src="https://gymsnearby.in/trainer/controller/upload/1688043568_8484.jpeg" alt="Santanu Boral" class="rounded-full w-12 h-12 mr-3 object-cover">
+                        <div class="flex-grow">
+                            <div class="flex items-center justify-between">
+                                <div>
+                                    <div class="flex items-center">
+
+                                        <p class="font-semibold text-sm">Karthik</p> 
+                                        <p class="text-xs text-gray-500"> • 1w </p>
+                                    </div>
+                                    <p class="text-xs text-gray-500">Personal Trainer</p>
+                                    <!-- <p class="text-xs text-gray-500">1w • Edited • <i class="fas fa-globe-americas"></i></p> -->
+                                </div>
+                                <button class="text-gray-400 hover:bg-gray-100 p-2 rounded-full">
+                                    <i class="fas fa-ellipsis-h"></i>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Post content -->
+                    <div class="mb-3">
+                        <!-- <p class="mb-2">*** Exciting News at Dreamforce 24 ***</p> -->
+                        <p>The AI Associate and AI Specialist certification exams are now available at no cost until December 31, 2025. This is a great opportunity for everyone in the Salesforce ecosystem to upskill and validate their AI expertise. <span class="text-blue-600 cursor-pointer">...see more</span></p>
+                    </div>
+
+                    <!-- ------------ code for multiple image, in case needed for future---------------------- -->
+                    <!-- <div class="grid grid-cols-2 gap-1 mb-3">
+                        <div class="relative pb-[100%]">
+                            <img src="/api/placeholder/400/400" alt="Image 1" class="absolute inset-0 w-full h-full object-cover rounded-tl-lg">
+                        </div>
+                        <div class="relative pb-[100%]">
+                            <img src="/api/placeholder/400/400" alt="Image 2" class="absolute inset-0 w-full h-full object-cover rounded-tr-lg">
+                        </div>
+                        <div class="relative pb-[100%]">
+                            <img src="/api/placeholder/400/400" alt="Image 3" class="absolute inset-0 w-full h-full object-cover rounded-bl-lg">
+                        </div>
+                        <div class="relative pb-[100%]">
+                            <div class="absolute inset-0 w-full h-full bg-black bg-opacity-50 flex items-center justify-center rounded-br-lg">
+                                <span class="text-white text-2xl font-bold">+3</span>
+                            </div>
+                            <img src="/api/placeholder/400/400" alt="Image 4" class="absolute inset-0 w-full h-full object-cover rounded-br-lg">
+                        </div>
+                    </div> -->
+                    
+                
+                    <!-- Embedded content -->
+                    <div class="mb-3">
+                        <div class="relative w-full" style="padding-bottom: 56.25%;">
+                            <!-- 16:9 aspect ratio container -->
+                            <img src="https://gymsnearby.in/gym/controller/upload/1687936203_5123.jpg" alt="Post image" class="absolute inset-0 w-full h-full object-cover rounded-lg">
+                        </div>
+                    </div>
+                
+                    <!-- Engagement stats -->
+    <div class="flex items-center text-xs text-gray-500 mb-2">
+        <span class="flex items-center mr-2">
+            <img src="/api/placeholder/16/16" alt="Like" class="mr-1">
+            <img src="/api/placeholder/16/16" alt="Love" class="mr-1">
+            <img src="/api/placeholder/16/16" alt="Celebrate" class="mr-1">
+        </span>
+        <span>2,373</span>
+        <span class="mx-1">•</span>
+        <span>56 comments</span>
+        <span class="mx-1">•</span>
+        <span>304 reposts</span>
+    </div>
+
+
+    <!-- Action buttons -->
+    <div class="flex justify-between border-t pt-2">
+        <button class="flex items-center justify-center text-gray-500 hover:bg-gray-100 px-4 py-2 rounded-md transition duration-150 ease-in-out">
+            <i class="far fa-thumbs-up mr-2"></i> Like
+        </button>
+        <button class="flex items-center justify-center text-gray-500 hover:bg-gray-100 px-4 py-2 rounded-md transition duration-150 ease-in-out">
+            <i class="far fa-comment mr-2"></i> Comment
+        </button>
+        <button class="flex items-center justify-center text-gray-500 hover:bg-gray-100 px-4 py-2 rounded-md transition duration-150 ease-in-out">
+            <i class="fas fa-retweet mr-2"></i> Repost
+        </button>
+        <button class="flex items-center justify-center text-gray-500 hover:bg-gray-100 px-4 py-2 rounded-md transition duration-150 ease-in-out">
+            <i class="far fa-paper-plane mr-2"></i> Send
+        </button>
+    </div>
+    
+    <!-- New Comment Input Section -->
+    <div class="flex items-center mb-3">
+        <img src="https://media.licdn.com/dms/image/v2/D4D03AQHUE9HMhfqs2A/profile-displayphoto-shrink_100_100/profile-displayphoto-shrink_100_100/0/1673010355845?e=1732752000&v=beta&t=-JmQ0Oyj0A4fGUcneWHO0-YgBMy46SYGsRMFlEzf9WQ" alt="Profile" class="rounded-full mr-2 w-8 h-8">
+        <div class="relative flex-grow">
+            <input type="text" placeholder="Add a comment..." class="bg-gray-100 rounded-full py-2 px-4 w-full pr-10">
+            <button class="absolute right-2 top-1/2 transform -translate-y-1/2 text-blue-600 hover:text-blue-700">
+                <i class="fas fa-paper-plane"></i>
+            </button>
+        </div>
+    </div>
+                </div>
+            </div>
+
+            <!-- Right Sidebar -->
+            <div class="md:col-span-3 order-3">
+                <!-- <div class="bg-white rounded-lg shadow-md p-4 mb-4">
+                    <h3 class="font-bold mb-2">LinkedIn News</h3>
+                    <ul class="space-y-2">
+                        <li>
+                            <p class="font-bold text-sm">Top funding news to know</p>
+                            <p class="text-xs text-gray-500">17h ago • 2,127 readers</p>
+                        </li>
+                        <li>
+                            <p class="font-bold text-sm">Building a career in social impact</p>
+                            <p class="text-xs text-gray-500">4h ago • 874 readers</p>
+                        </li>
+                        <li>
+                            <p class="font-bold text-sm">Redcliffe Labs raises $42 million</p>
+                            <p class="text-xs text-gray-500">1d ago • 20,340 readers</p>
+                        </li>
+                        <li>
+                            <p class="font-bold text-sm">Where Indians are moving for work</p>
+                            <p class="text-xs text-gray-500">1d ago • 16,989 readers</p>
+                        </li>
+                        <li>
+                            <p class="font-bold text-sm">Top industry for B-school talent</p>
+                            <p class="text-xs text-gray-500">2d ago • 4,011 readers</p>
+                        </li>
+                    </ul>
+                    <button class="text-gray-600 mt-4 text-sm">Show more <i class="fas fa-chevron-down"></i></button> -->
+                </div>
+                
+            </div>
+            
+        </div>
+    </main>
+    <footer class="bg-gray-100 mt-8">
+        <div class="max-w-7xl mx-auto px-4 py-8">
+            <div class="grid grid-cols-2 md:grid-cols-4 gap-8">
+                <div>
+                    <h3 class="font-semibold text-sm mb-3">About</h3>
+                    <ul class="space-y-2 text-sm">
+                        <li><a href="#" class="text-gray-600 hover:text-gray-900">About Us</a></li>
+                        <li><a href="#" class="text-gray-600 hover:text-gray-900">Community Guidelines</a></li>
+                        <li><a href="#" class="text-gray-600 hover:text-gray-900">Privacy & Terms</a></li>
+                        <li><a href="#" class="text-gray-600 hover:text-gray-900">Sales Solutions</a></li>
+                        <li><a href="#" class="text-gray-600 hover:text-gray-900">Safety Center</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h3 class="font-semibold text-sm mb-3">Accessibility</h3>
+                    <ul class="space-y-2 text-sm">
+                        <li><a href="#" class="text-gray-600 hover:text-gray-900">Careers</a></li>
+                        <li><a href="#" class="text-gray-600 hover:text-gray-900">Ad Choices</a></li>
+                        <li><a href="#" class="text-gray-600 hover:text-gray-900">Mobile</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h3 class="font-semibold text-sm mb-3">Talent</h3>
+                    <ul class="space-y-2 text-sm">
+                        <li><a href="#" class="text-gray-600 hover:text-gray-900">Talent Solutions</a></li>
+                        <li><a href="#" class="text-gray-600 hover:text-gray-900">Marketing Solutions</a></li>
+                        <li><a href="#" class="text-gray-600 hover:text-gray-900">Advertising</a></li>
+                        <li><a href="#" class="text-gray-600 hover:text-gray-900">Small Business</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h3 class="font-semibold text-sm mb-3">Connect</h3>
+                    <div class="flex space-x-4 text-gray-600">
+                        <a href="#" class="hover:text-gray-900"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#" class="hover:text-gray-900"><i class="fab fa-twitter"></i></a>
+                        <a href="#" class="hover:text-gray-900"><i class="fab fa-instagram"></i></a>
+                        <a href="#" class="hover:text-gray-900"><i class="fab fa-youtube"></i></a>
+                    </div>
+                </div>
+            </div>
+            <div class="mt-8 pt-8 border-t border-gray-200 flex flex-col md:flex-row justify-between items-center">
+                <div class="text-sm text-gray-600 mb-4 md:mb-0">
+                    <img src="https://gymsnearby.in/img/fitfusion.png" alt="FitFusion Logo" class="h-8 w-auto inline-block mr-2">
+                    © 2024 FitFusion. All rights reserved.
+                </div>
+                <div class="text-sm">
+                    <a href="#" class="text-gray-600 hover:text-gray-900 mr-4">User Agreement</a>
+                    <a href="#" class="text-gray-600 hover:text-gray-900 mr-4">Cookie Policy</a>
+                    <a href="#" class="text-gray-600 hover:text-gray-900 mr-4">Copyright Policy</a>
+                    <a href="#" class="text-gray-600 hover:text-gray-900">Brand Policy</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>
